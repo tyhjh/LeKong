@@ -57,4 +57,12 @@
     <string name="mode_host">会客模式</string>
     <string name="hint">如果你需要创建账号、修改配置、获取更多信息。请访问：http://www.tingspectrum.com</string>
 
+    <string name="sign_in">http://www.tingspectrum.com/api/v2/auth/sign_in</string>
+
+    <string name="builds">http://www.tingspectrum.com/api/v2/buildings</string>
+
+    <string name="token">http://www.tingspectrum.com/api/v2/auth/validate_token</string>
+
+    <string name="building_detail">http://www.tingspectrum.com/api/v2/building_detail</string>
+
 </resources>
