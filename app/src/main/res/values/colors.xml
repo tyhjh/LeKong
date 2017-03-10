@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="globalBg">#271e36</color>
+
+    <color name="textColor">#b2ffffff</color>  // 70% alpha White
+    <color name="textColorWhite">#fff</color>
+    <color name="toolBarLineColor">#33ffffff</color> // 20% alpha White
+    <color name="lineColor">#12ffffff</color> // 7% alpha White
+
+
+    <color name="textColorBright">#ccffffff</color> // 80% alpha White
+    <color name="textColorDark">#4dffffff</color> // 30% alpha White
+
+    <color name="colorOn">#66ffdb</color>
+    <color name="colorOff">#b5b5b5</color>
+
+    <color name="cylinderNoThroughColor">#928f9b</color>
+    <color name="cylinderThroughColor">#66ffdb</color>
+
+
+    // design color
+    <color name="colorWhite30">#4dffffff</color>    //30% alpha white
+</resources>

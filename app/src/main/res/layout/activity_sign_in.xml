@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/globalBg"
+    android:orientation="vertical"
+    tools:context="com.example.hanawa.smarterhometest.SignIn">
+
+    <include layout="@layout/toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_line_vertical_height"
+        android:layout_below="@+id/home_toolbar"
+        android:background="@color/toolBarLineColor" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:textColor="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登录你的乐控账号，获取项目配置信息"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorWhite"
+            android:text="邮箱账号"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+
+        <EditText
+            android:textSize="14sp"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/et_number"
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:textColor="@color/colorWhite"
+            android:text="密码"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+
+        <EditText
+            android:textSize="14sp"
+            android:inputType="textPassword"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:id="@+id/et_pwd"
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
+
+        <Button
+            android:id="@+id/btn_sign_in"
+            android:textColor="@color/colorWhite"
+            android:text="登录"
+            android:background="@color/cylinderNoThroughColor"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="47dp" />
+
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="20dp"
+            android:textSize="13sp"
+            android:text="@string/hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

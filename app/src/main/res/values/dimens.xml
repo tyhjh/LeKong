@@ -1,0 +1,68 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="toolbar_line_vertical_height">1dp</dimen>
+    <dimen name="line_vertical_height">0.5dp</dimen>
+    <dimen name="content_margin_left">16dp</dimen>
+    <dimen name="content_margin_right">16dp</dimen>
+
+    // Design
+    <dimen name="circular_no_select_size">20dp</dimen>
+    <dimen name="circular_selected_size">30dp</dimen>
+    // - layout_group_wind
+    <dimen name="lgw_width">288dp</dimen>
+    <dimen name="lgw_text_size">13sp</dimen>
+    <dimen name="lgw_line_group_height">2dp</dimen>
+    <dimen name="lgw_text_margin_bottom">23dp</dimen>
+    <dimen name="lgw_btn1_margin_left">-10dp</dimen>
+    <dimen name="lgw_btn2_margin_left">47dp</dimen>
+    <dimen name="lgw_btn3_margin_left">114dp</dimen>
+    <dimen name="lgw_btn4_margin_left">176dp</dimen>
+    <dimen name="lgw_btn5_margin_right">-10dp</dimen>
+
+    //Home
+    <dimen name="home_layout_vertical_height">60dp</dimen>
+    <dimen name="home_layout_horizontal_padding">15dp</dimen>
+    <dimen name="home_text_size">13sp</dimen>
+    <dimen name="home_img_text_distance">22dp</dimen>
+
+    //LivingRoom
+    <dimen name="living_room_horizontal_margin">70dp</dimen>
+    <dimen name="living_room_vertical_margin">67dp</dimen>
+    <dimen name="living_room_text_size">13sp</dimen>
+    <dimen name="living_room_text_margin_top">20dp</dimen>
+
+    //LightControl
+    <dimen name="lc_item_layout_height">55dp</dimen>
+    <dimen name="lc_brightness_layout_height">94dp</dimen>
+    <dimen name="lc_item_text_size">15sp</dimen>
+    <dimen name="lc_brightness_text_size">13sp</dimen>
+    <dimen name="lc_scroll_margin_hor">12dp</dimen>
+    <dimen name="lc_text_margin_top">19dp</dimen>
+
+    //TemControl
+    <dimen name="tc_rl_aircon_height">55dp</dimen>
+    <dimen name="tc_rl_tem_height">89dp</dimen>
+    <dimen name="tc_rl_wind_height">130dp</dimen>
+    <dimen name="tc_rl_mode_height">152dp</dimen>
+    <dimen name="tc_layout_margin_hor">12dp</dimen>
+    <dimen name="tc_text_size">15sp</dimen>
+    <dimen name="tc_text_margin_top">14dp</dimen>
+    <dimen name="tc_rl_floorheat_height">55dp</dimen>
+
+    //ScenesControl
+    <dimen name="sc_item">184dp</dimen>
+    <dimen name="sc_text_margin_top1">20dp</dimen>
+    <dimen name="sc_text_size1">15dp</dimen>
+    <dimen name="sc_text_margin_top2">14dp</dimen>
+    <dimen name="sc_text_size2">13dp</dimen>
+    <dimen name="sc_text_margin_bottom">30dp</dimen>
+    <dimen name="sc_iv_marin_hor">37dp</dimen>
+
+    //ModeSelect
+    <dimen name="ms_ll_margin_top">54dp</dimen>
+    <dimen name="ms_text_margin_top">14dp</dimen>
+    <dimen name="ms_text_size">13pt</dimen>
+</resources>

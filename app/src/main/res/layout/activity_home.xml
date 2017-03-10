@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/globalBg"
+    tools:context="com.example.hanawa.smarterhometest.HomeActivity">
+
+    <include
+        android:id="@+id/home_toolbar"
+        layout="@layout/toolbar" />
+
+    <ImageView
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:padding="18dp"
+        android:src="@drawable/ic_set"
+        android:layout_alignParentRight="true"
+        android:id="@+id/iv_set"
+        android:layout_width="56dp"
+        android:layout_height="56dp" />
+
+    <View
+        android:layout_below="@+id/home_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_line_vertical_height"
+        android:background="@color/toolBarLineColor" />
+
+    <RelativeLayout
+        android:id="@+id/home_rl_living"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/home_toolbar"
+        android:padding="@dimen/home_layout_horizontal_padding">
+
+        <ImageView
+            android:id="@+id/home_rl_iv_living"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/home_img_text_distance"
+            android:src="@mipmap/living_room" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/home_rl_iv_living"
+            android:text="@string/living_room"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/home_text_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_vertical_height"
+        android:layout_marginLeft="@dimen/home_layout_horizontal_padding"
+        android:layout_below="@+id/home_rl_living"
+        android:background="@color/lineColor" />
+
+    <RelativeLayout
+        android:id="@+id/home_rl_dining"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/home_rl_living"
+        android:padding="@dimen/home_layout_horizontal_padding">
+
+        <ImageView
+            android:id="@+id/home_rl_iv_dining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/home_img_text_distance"
+            android:src="@mipmap/dining_room" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/home_rl_iv_dining"
+            android:text="@string/dining_room"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/home_text_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_vertical_height"
+        android:layout_marginLeft="@dimen/home_layout_horizontal_padding"
+        android:layout_below="@id/home_rl_dining"
+        android:background="@color/lineColor" />
+
+    <RelativeLayout
+        android:id="@+id/home_rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/home_rl_dining"
+        android:padding="@dimen/home_layout_horizontal_padding">
+
+        <ImageView
+            android:id="@+id/home_rl_iv_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/home_img_text_distance"
+            android:src="@mipmap/main_bedroom" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/home_rl_iv_main"
+            android:text="@string/main_bedroom"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/home_text_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_vertical_height"
+        android:layout_marginLeft="@dimen/home_layout_horizontal_padding"
+        android:layout_below="@+id/home_rl_main"
+        android:background="@color/lineColor" />
+
+    <RelativeLayout
+        android:id="@+id/home_rl_study"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/home_rl_main"
+        android:padding="@dimen/home_layout_horizontal_padding">
+
+        <ImageView
+            android:id="@+id/home_rl_iv_study"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/home_img_text_distance"
+            android:src="@mipmap/study_room" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/home_rl_iv_study"
+            android:text="@string/study_room"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/home_text_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_vertical_height"
+        android:layout_marginLeft="@dimen/home_layout_horizontal_padding"
+        android:layout_below="@+id/home_rl_study"
+        android:background="@color/lineColor" />
+
+    <RelativeLayout
+        android:id="@+id/home_rl_children"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/home_rl_study"
+        android:padding="@dimen/home_layout_horizontal_padding">
+
+        <ImageView
+            android:id="@+id/home_rl_iv_children"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/home_img_text_distance"
+            android:src="@mipmap/childrem_room" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/home_rl_iv_children"
+            android:text="@string/children_room"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/home_text_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_vertical_height"
+        android:layout_marginLeft="@dimen/home_layout_horizontal_padding"
+        android:layout_below="@+id/home_rl_children"
+        android:background="@color/lineColor" />
+
+    <RelativeLayout
+        android:id="@+id/home_rl_video"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/home_rl_children"
+        android:padding="@dimen/home_layout_horizontal_padding">
+
+        <ImageView
+            android:id="@+id/home_rl_iv_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/home_img_text_distance"
+            android:src="@mipmap/video_room" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/home_rl_iv_video"
+            android:text="@string/video_room"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/home_text_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/home_layout_horizontal_padding"
+        android:layout_height="@dimen/line_vertical_height"
+        android:layout_below="@+id/home_rl_video"
+        android:background="@color/lineColor" />
+
+</RelativeLayout>

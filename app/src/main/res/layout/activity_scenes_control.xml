@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_scenes_control"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/globalBg"
+    tools:context="com.example.hanawa.smarterhometest.ScenesControlActivity">
+
+    <include
+        android:id="@+id/sc_toolbar"
+        layout="@layout/toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_line_vertical_height"
+        android:layout_below="@+id/sc_toolbar"
+        android:background="@color/lineColor" />
+
+    <RelativeLayout
+        android:id="@+id/sc_rl_southeast1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sc_item"
+        android:layout_below="@+id/sc_toolbar">
+
+        <TextView
+            android:id="@+id/sc_tv_southeast1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sc_text_margin_bottom"
+            android:layout_marginLeft="@dimen/content_margin_left"
+            android:layout_marginTop="@dimen/sc_text_margin_top1"
+            android:text="@string/southeast_window_curtains"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sc_text_size1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/sc_tv_southeast1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/sc_ll_curtain_on"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/sc_iv_curtain_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/open_click" />
+
+                <TextView
+                    android:id="@+id/sc_tv_curtain_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sc_text_margin_top2"
+                    android:text="@string/window_curtains_on"
+                    android:textColor="@color/colorOn" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sc_ll_curtain_stop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/sc_iv_curtain_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/pause" />
+
+                <TextView
+                    android:id="@+id/sc_tv_curtain_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sc_text_margin_top2"
+                    android:text="@string/window_curtains_stop"
+                    android:textColor="@color/colorOff" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sc_ll_curtain_off"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/sc_iv_curtain_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/close" />
+
+                <TextView
+                    android:id="@+id/sc_tv_curtain_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sc_text_margin_top2"
+                    android:text="@string/window_curtains_off"
+                    android:textColor="@color/colorOff" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_vertical_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/content_margin_left"
+            android:layout_marginRight="@dimen/content_margin_right"
+            android:background="@color/lineColor" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sc_item"
+        android:layout_below="@+id/sc_rl_southeast1">
+
+        <TextView
+            android:id="@+id/sc_tv_southeast2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sc_text_margin_bottom"
+            android:layout_marginLeft="@dimen/content_margin_left"
+            android:layout_marginTop="@dimen/sc_text_margin_top1"
+            android:text="@string/southeast_window_screen"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sc_text_size1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/sc_tv_southeast2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/sc_ll_screen_on"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/sc_iv_screen_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/up_click" />
+
+                <TextView
+                    android:id="@+id/sc_tv_screen_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sc_text_margin_top2"
+                    android:text="@string/window_screen_on"
+                    android:textColor="@color/colorOn" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sc_ll_screen_stop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/sc_iv_screen_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/pause" />
+
+                <TextView
+                    android:id="@+id/sc_tv_screen_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sc_text_margin_top2"
+                    android:text="@string/window_screen_stop"
+                    android:textColor="@color/colorOff" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sc_ll_screen_off"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/sc_iv_screen_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/down" />
+
+                <TextView
+                    android:id="@+id/sc_tv_screen_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sc_text_margin_top2"
+                    android:text="@string/window_screen_off"
+                    android:textColor="@color/colorOff" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_vertical_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/content_margin_left"
+            android:layout_marginRight="@dimen/content_margin_right"
+            android:background="@color/lineColor" />
+    </RelativeLayout>
+
+</RelativeLayout>

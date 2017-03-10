@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">乐控</string>
+
+    <string name="home">首页</string>
+    <string name="living_room">客厅</string>
+    <string name="dining_room">餐厅</string>
+    <string name="main_bedroom">主卧</string>
+    <string name="study_room">书房</string>
+    <string name="children_room">儿童房</string>
+    <string name="video_room">影视厅</string>
+
+    //自定义
+    // - layout_group_wind
+    <string name="lgw_num1">1</string>
+    <string name="lgw_num2">2</string>
+    <string name="lgw_num3">3</string>
+    <string name="lgw_num4">4</string>
+    <string name="lgw_num5">5</string>
+
+    // 客厅
+    <string name="mode_select">模式选择</string>
+    <string name="light_control">灯光控制</string>
+    <string name="temperaturre_control">温度控制</string>
+    <string name="scenes_control">窗帘控制</string>
+
+    // 灯光调节
+    <string name="tv_chandelier">电视吊灯</string>
+    <string name="dark">暗</string>
+    <string name="bright">亮</string>
+    <string name="light_belt">灯带</string>
+    <string name="relax_area_light">休息区射灯</string>
+    <string name="center_area_light">中间区射灯</string>
+    <string name="tv_light">电视射灯</string>
+
+    //温度调节
+    <string name="aircon">空调</string>
+    <string name="mode_cold">制冷模式</string>
+    <string name="mode_heat">制热模式</string>
+    <string name="mode_dehum">除湿模式</string>
+    <string name="mode_wind">通风模式</string>
+    <string name="floor_heat">地暖</string>
+
+    //窗帘控制
+    <string name="southeast_window_curtains">东南面布帘</string>
+    <string name="southeast_window_screen">东南面纱窗</string>
+    <string name="window_curtains_on">打开窗帘</string>
+    <string name="window_curtains_stop">停止</string>
+    <string name="window_curtains_off">关闭窗帘</string>
+    <string name="window_screen_on">打开纱窗</string>
+    <string name="window_screen_stop">停止</string>
+    <string name="window_screen_off">关闭纱窗</string>
+
+    //模式选择
+    <string name="mode_home_come">回家模式</string>
+    <string name="mode_home_leave">离家模式</string>
+    <string name="mode_radio">影音模式</string>
+    <string name="mode_host">会客模式</string>
+    <string name="hint">如果你需要创建账号、修改配置、获取更多信息。请访问：http://www.tingspectrum.com</string>
+
+</resources>

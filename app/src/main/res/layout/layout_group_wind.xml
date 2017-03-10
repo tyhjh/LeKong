@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/lgw_width"
+    android:layout_height="100dp"
+    android:layout_centerInParent="true"
+    android:background="@color/globalBg"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="248dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <View
+            android:id="@+id/lgw_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lgw_line_group_height"
+            android:layout_centerInParent="true"
+            android:background="@drawable/cylinder_hor" />
+
+
+        <RelativeLayout
+            android:id="@+id/lgw_rl1"
+            android:layout_width="@dimen/circular_no_select_size"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lgw_btn1"
+            android:layout_alignLeft="@+id/lgw_btn1"
+            android:layout_marginLeft="@dimen/lgw_btn1_margin_left">
+
+            <TextView
+                android:id="@+id/lgw_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/lgw_text_margin_bottom"
+                android:text="@string/lgw_num1"
+                android:textColor="@color/colorWhite30"
+                android:textSize="@dimen/lgw_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lgw_rl2"
+            android:layout_width="@dimen/circular_selected_size"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lgw_btn1"
+            android:layout_alignLeft="@+id/lgw_btn2">
+
+            <TextView
+                android:id="@+id/lgw_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/lgw_text_margin_bottom"
+                android:text="@string/lgw_num2"
+                android:textColor="@color/colorOn"
+                android:textSize="@dimen/lgw_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lgw_rl3"
+            android:layout_width="@dimen/circular_no_select_size"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lgw_btn1"
+            android:layout_alignLeft="@+id/lgw_btn3"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/lgw_tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/lgw_text_margin_bottom"
+                android:text="@string/lgw_num3"
+                android:textColor="@color/colorWhite30"
+                android:textSize="@dimen/lgw_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lgw_rl4"
+            android:layout_width="@dimen/circular_no_select_size"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lgw_btn1"
+            android:layout_alignLeft="@+id/lgw_btn4">
+
+            <TextView
+                android:id="@+id/lgw_tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/lgw_text_margin_bottom"
+                android:text="@string/lgw_num4"
+                android:textColor="@color/colorWhite30"
+                android:textSize="@dimen/lgw_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lgw_rl5"
+            android:layout_width="@dimen/circular_no_select_size"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lgw_btn1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/lgw_btn5_margin_right">
+
+            <TextView
+                android:id="@+id/lgw_tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/lgw_text_margin_bottom"
+                android:text="@string/lgw_num5"
+                android:textColor="@color/colorWhite30"
+                android:textSize="@dimen/lgw_text_size" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/lgw_btn1"
+            android:layout_width="@dimen/circular_no_select_size"
+            android:layout_height="@dimen/circular_no_select_size"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/lgw_btn1_margin_left"
+            android:background="@drawable/circular_no_select" />
+
+        <Button
+            android:id="@+id/lgw_btn2"
+            android:layout_width="@dimen/circular_selected_size"
+            android:layout_height="@dimen/circular_selected_size"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/lgw_btn2_margin_left"
+            android:background="@drawable/circular_selected" />
+
+        <Button
+            android:id="@+id/lgw_btn3"
+            android:layout_width="@dimen/circular_no_select_size"
+            android:layout_height="@dimen/circular_no_select_size"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/lgw_btn3_margin_left"
+            android:background="@drawable/circular_no_select" />
+
+        <Button
+            android:id="@+id/lgw_btn4"
+            android:layout_width="@dimen/circular_no_select_size"
+            android:layout_height="@dimen/circular_no_select_size"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/lgw_btn4_margin_left"
+            android:background="@drawable/circular_no_select" />
+
+        <Button
+            android:id="@+id/lgw_btn5"
+            android:layout_width="@dimen/circular_no_select_size"
+            android:layout_height="@dimen/circular_no_select_size"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/lgw_btn5_margin_right"
+            android:background="@drawable/circular_no_select" />
+    </RelativeLayout>
+</RelativeLayout>

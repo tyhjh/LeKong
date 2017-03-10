@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/colorWhite" />
+            <size android:width="@dimen/circular_no_select_size" android:height="@dimen/circular_no_select_size" />
+        </shape>
+    </item>
+
+    <item android:state_enabled="true" android:state_checkable="true" android:state_activated="true" android:state_pressed="true" android:state_selected="true" android:drawable="@drawable/circular_selected"/>
+
+
+</selector>
