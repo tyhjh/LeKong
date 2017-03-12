@@ -1,7 +1,9 @@
 package com.example.hanawa.smarterhometest.model;
 
+import java.io.Serializable;
+
 //窗户
-public class Window{
+public class Window implements Serializable {
     private String name;
     private String control_open;
     private String status_open;

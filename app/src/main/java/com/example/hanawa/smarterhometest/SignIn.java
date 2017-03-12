@@ -77,7 +77,6 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-
         switch (v.getId()){
             case R.id.toolbar_back:
                 this.finish();
@@ -88,7 +87,6 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener{
             default:
                 break;
         }
-
     }
 
 

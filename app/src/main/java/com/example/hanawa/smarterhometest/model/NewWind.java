@@ -1,7 +1,9 @@
 package com.example.hanawa.smarterhometest.model;
 
+import java.io.Serializable;
+
 //新风
-public class NewWind{
+public class NewWind implements Serializable {
     private String name;
     private String control;
     private String status;

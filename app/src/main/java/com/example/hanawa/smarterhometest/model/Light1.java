@@ -1,7 +1,9 @@
 package com.example.hanawa.smarterhometest.model;
 
+import java.io.Serializable;
+
 //灯
-public class Light1{
+public class Light1 implements Serializable{
     private String name;
     private String control_address;
     private String status_address;

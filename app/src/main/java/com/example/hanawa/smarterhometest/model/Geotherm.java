@@ -1,7 +1,9 @@
 package com.example.hanawa.smarterhometest.model;
 
+import java.io.Serializable;
+
 //地热
-public class Geotherm{
+public class Geotherm implements Serializable {
     private String name;
     private String control_open;
     private String status_open;

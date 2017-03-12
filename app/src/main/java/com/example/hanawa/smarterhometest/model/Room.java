@@ -1,5 +1,6 @@
 package com.example.hanawa.smarterhometest.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -7,7 +8,8 @@ import java.util.List;
  */
 
 //房间
-public class Room {
+public class Room implements Serializable{
+    private int type;
     private String name;
     private String image;
     private List<Light1> light1s;
@@ -26,11 +28,13 @@ public class Room {
         this.airConditions = airConditions;
         this.newWinds = newWinds;
         this.geotherms = geotherms;
+        type=1;
     }
 
     public Room(String name, String image) {
         this.name = name;
         this.image = image;
+        type=1;
     }
 
     public String getName() {
@@ -96,6 +100,14 @@ public class Room {
 
     public void setGeotherms(List<Geotherm> geotherms) {
         this.geotherms = geotherms;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 }
 

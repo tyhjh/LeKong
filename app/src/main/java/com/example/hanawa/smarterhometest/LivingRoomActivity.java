@@ -9,17 +9,21 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.hanawa.smarterhometest.model.Room;
+
 public class LivingRoomActivity extends AppCompatActivity implements View.OnClickListener {
 
     LinearLayout modeSelect, lightControl, temControl, scenesControl;
     RelativeLayout toolbar;
     LinearLayout back;
     TextView backTV, title;
+    Room room;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_living_room);
+        room= (Room) getIntent().getSerializableExtra("room");
         init();
         initData();
     }
@@ -44,7 +48,7 @@ public class LivingRoomActivity extends AppCompatActivity implements View.OnClic
     private void initData() {
         back.setVisibility(View.VISIBLE);
         backTV.setText(R.string.home);
-        title.setText(R.string.living_room);
+        title.setText(room.getName());
     }
 
     @Override
@@ -54,7 +58,11 @@ public class LivingRoomActivity extends AppCompatActivity implements View.OnClic
                 startActivity(new Intent(this, ModeSelectActivity.class));
                 break;
             case R.id.living_room_ll_light_control:
-                startActivity(new Intent(this, LightControlActivity.class));
+                Bundle bundle=new Bundle();
+                bundle.putSerializable("room_light",room);
+                Intent intent=new Intent(this, LightControlActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
                 break;
             case R.id.living_room_ll_tem_control:
                 startActivity(new Intent(this, TemControlActivity.class));

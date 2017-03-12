@@ -1,7 +1,9 @@
 package com.example.hanawa.smarterhometest.model;
 
+import java.io.Serializable;
+
 //空调
-public class AirCondition{
+public class AirCondition implements Serializable {
     private String name;
     private String control;
     private String status;

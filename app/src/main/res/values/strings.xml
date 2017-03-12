@@ -64,5 +64,6 @@
     <string name="token">http://www.tingspectrum.com/api/v2/auth/validate_token</string>
 
     <string name="building_detail">http://www.tingspectrum.com/api/v2/building_detail</string>
+    <string name="tcp_erro">与智能硬件连接出错，请确保已接入家庭网络</string>
 
 </resources>

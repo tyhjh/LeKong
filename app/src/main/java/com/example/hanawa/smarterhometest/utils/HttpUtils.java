@@ -1,13 +1,16 @@
 package com.example.hanawa.smarterhometest.utils;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.hanawa.smarterhometest.R;
+import com.example.hanawa.smarterhometest.listener.update;
 import com.example.hanawa.smarterhometest.model.AirCondition;
+import com.example.hanawa.smarterhometest.model.Connect;
 import com.example.hanawa.smarterhometest.model.Floor;
 import com.example.hanawa.smarterhometest.model.Geotherm;
 import com.example.hanawa.smarterhometest.model.Light1;
@@ -15,6 +18,7 @@ import com.example.hanawa.smarterhometest.model.Light2;
 import com.example.hanawa.smarterhometest.model.NewWind;
 import com.example.hanawa.smarterhometest.model.Room;
 import com.example.hanawa.smarterhometest.model.Window;
+import com.example.hanawa.smarterhometest.service.MyService;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.Callback;
 
@@ -33,6 +37,8 @@ import okhttp3.Response;
  */
 
 public class HttpUtils {
+
+    private update update;
 
     private Context context;
     private View et_number;
@@ -66,6 +72,7 @@ public class HttpUtils {
                         GetJson.setUid(response.header("uid").toString());
                         GetJson.savaPwd(email, password, context);
                         getToken();
+                        Snackbar.make(et_number, "登录成功", Snackbar.LENGTH_SHORT).show();
                         return null;
                     }
 
@@ -135,6 +142,9 @@ public class HttpUtils {
                         GetJson.setSocket_address(json.getString("socket_address"));
                         GetJson.setSocket_port(json.getInt("socket_port"));
                         getBuildDetail();
+                        Connect.setPort(GetJson.getSocket_address(),GetJson.getSocket_port());
+                        //Connect.setPort("192.168.31.215",4196);
+                        context.startService(new Intent(context, MyService.class));
                         return null;
                     }
 
@@ -165,7 +175,7 @@ public class HttpUtils {
                     @Override
                     public Object parseNetworkResponse(Response response, int id) throws Exception {
                         String msg = response.body().string();
-                        Log.e(TAG + "getBuildDetail", msg);
+                        Log.e(TAG,"getBuildDetail");
                         getMsg(msg);
                         return null;
                     }
@@ -286,5 +296,29 @@ public class HttpUtils {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        Log.e(TAG,"getMsg");
+        update.updateView(setDate());
+    }
+
+    //更新界面
+    public static List<Room> setDate() {
+        List<Room> rooms=new ArrayList<Room>();
+        if (GetJson.getFloors() != null) {
+            for (int i = 0; i < GetJson.getFloors().size(); i++) {
+                Room room = new Room(GetJson.getFloors().get(i).getName(), null);
+                room.setType(0);
+                rooms.add(room);
+                rooms.addAll(GetJson.getFloors().get(i).getRooms());
+            }
+        }
+        return rooms;
+    }
+
+    public com.example.hanawa.smarterhometest.listener.update getUpdate() {
+        return update;
+    }
+
+    public void setUpdate(com.example.hanawa.smarterhometest.listener.update update) {
+        this.update = update;
     }
 }

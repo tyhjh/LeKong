@@ -7,6 +7,8 @@
 
     <color name="globalBg">#271e36</color>
 
+    <color name="halfBg">#f0494f36</color>
+
     <color name="textColor">#b2ffffff</color>  // 70% alpha White
     <color name="textColorWhite">#fff</color>
     <color name="toolBarLineColor">#33ffffff</color> // 20% alpha White
