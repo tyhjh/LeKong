@@ -105,7 +105,7 @@ public class LightControlActivity extends AppCompatActivity implements View.OnCl
             }
 
             for(int i=0;i<light2s.size();i++){
-                if(light2s.get(i).getControl().equals(address)){
+                if(light2s.get(i).getStatus().equals(address)){
                     light2s.get(i).setState(state);
                     adapter.notifyItemChanged(i);
                     break;

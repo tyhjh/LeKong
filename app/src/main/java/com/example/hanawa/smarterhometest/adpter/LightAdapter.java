@@ -72,19 +72,19 @@ public class LightAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             getStatus(holder);
             onclick1(holder, light1Holder);
         } else {
+            getStatus(holder);
             Light2Holder light2Holder = (Light2Holder) holder;
             light2Holder.tv_name_light2.setText(light2s.get(holder.getPosition()).getName());
-            light2Holder.sb_light2.setProgress(100);
+            light2Holder.sb_light2.setMax(100);
+            light2Holder.sb_light2.setProgress(0);
             light2Holder.switch_light2.setChecked(light2s.get(holder.getPosition()).isState());
-            oclick2(light2Holder);
-
-
+            oclick2(light2Holder,holder);
         }
 
     }
 
     //调光灯
-    private void oclick2(Light2Holder light2Holder) {
+    private void oclick2(Light2Holder light2Holder,final RecyclerView.ViewHolder holder) {
         //亮度
         light2Holder.sb_light2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -105,8 +105,26 @@ public class LightAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         //开关
         light2Holder.switch_light2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
+            public void onCheckedChanged(CompoundButton buttonView, final boolean isChecked) {
+                if (!Connect.isConnect()) {
+                    handler.sendEmptyMessage(0);
+                    return;
+                }
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            if (isChecked) {
+                                Connect.getSingleton().sendMsg(new GlCode(light2s.get(holder.getPosition()).getControl()).send_control_light_1( "01",true));
+                            } else {
+                                Connect.getSingleton().sendMsg(new GlCode(light2s.get(holder.getPosition()).getControl()).send_control_light_1("00",true));
+                            }
+                        }catch (Exception e){
+                            e.printStackTrace();
+                            handler.sendEmptyMessage(0);
+                        }
+                    }
+                }).start();
             }
         });
     }
